@@ -1,1 +1,141 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Resume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            padding: 20px;
+            max-width: 800px;
+            margin: 40px auto;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            margin: 0;
+        }
+        .section-title {
+            margin-top: 40px;
+            border-bottom: 2px solid #333;
+            padding-bottom: 5px;
+        }
+        /* Hamburger Menu */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .navbar .icon {
+            display: none;
+        }
+        .navbar-content {
+            display: none;
+            flex-direction: column;
+        }
+        .navbar-content a {
+            border-bottom: 1px solid #444;
+        }
+        /* Show the menu when clicked */
+        .navbar.responsive .navbar-content {
+            display: flex;
+        }
+        .navbar.responsive .icon {
+            display: block;
+        }
+        /* Responsive styling */
+        @media screen and (max-width: 600px) {
+            .navbar a { display: none; }
+            .navbar .icon {
+                display: block;
+                float: right;
+                padding: 14px 16px;
+            }
+            .navbar-content {
+                display: none;
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar" id="navbar">
+        <a href="javascript:void(0);" class="icon" onclick="toggleNavbar()">
+            <i class="fas fa-bars"></i> <!-- Hamburger icon -->
+        </a>
+        <div class="navbar-content" id="navbar-content">
+            <a href="#about">About Me</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="container">
+        <h1>Your Name</h1>
+        <div class="contact-info">
+            <p><strong>Email:</strong> your.email@example.com</p>
+            <p><strong>GitHub:</strong> <a href="https://github.com/yourusername">github.com/yourusername</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/yourprofile">linkedin.com/in/yourprofile</a></p>
+        </div>
+
+        <h2 class="section-title" id="about">About Me</h2>
+        <p>A brief introduction about yourself, your career goals, and key skills.</p>
+
+        <h2 class="section-title" id="experience">Experience</h2>
+        <h3>Job Title, Company Name</h3>
+        <p>Month Year - Month Year</p>
+        <p>Describe your responsibilities and accomplishments in this role.</p>
+
+        <h2 class="section-title" id="education">Education</h2>
+        <h3>Degree, University Name</h3>
+        <p>Month Year - Month Year</p>
+        <p>Details about your education and notable achievements.</p>
+
+        <h2 class="section-title" id="skills">Skills</h2>
+        <ul>
+            <li>Programming Language 1</li>
+            <li>Programming Language 2</li>
+            <li>Tool/Technology 1</li>
+        </ul>
+    </div>
+
+    <!-- JavaScript to toggle the navbar -->
+    <script>
+        function toggleNavbar() {
+            var navbar = document.getElementById("navbar");
+            if (navbar.className === "") {
+                navbar.className = "responsive";
+            } else {
+                navbar.className = "";
+            }
+        }
+    </script>
+</body>
+</html>
